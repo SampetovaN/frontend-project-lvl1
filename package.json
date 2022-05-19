@@ -1,0 +1,25 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "First project on Hexlet",
+  "main": "index.js",
+  "bin": {
+    "code": "brain-games.js"
+  },
+  "scripts": {
+    "test": "npx pretter --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SampetovaN/frontend-project-lvl1.git"
+  },
+  "keywords": [
+    "hexlet"
+  ],
+  "author": "Sampetova V",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SampetovaN/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/SampetovaN/frontend-project-lvl1#readme"
+}
