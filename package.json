@@ -8,7 +8,6 @@
     "brain-games": "bin/brain-games.js"
   },
   "scripts": {
-    "install": "npm ci",
     "start": "node bin/brain-games.js"
   },
   "repository": {
