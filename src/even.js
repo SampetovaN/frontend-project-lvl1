@@ -11,7 +11,7 @@ const even = () => {
   const NUM_ROUNDS = 3;
   const game = () => {
     const randomNum = randomNumber();
-    readlineSync.question(`Question: ${randomNum}`);
+    console.log(`Question: ${randomNum}`);
     const answer = readlineSync.prompt();
     const result = getResult(randomNum);
     if (answer.trim() !== result) {
