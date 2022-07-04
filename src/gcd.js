@@ -1,6 +1,8 @@
 import game from '../src/index.js';
 import { randomNumber } from '../src/util.js';
 
+const randomGcdNumbers = () => `${randomNumber()} ${randomNumber()}`;
+
 const getValidResult = (numsString) => {
   let [x, y] = numsString.split(' ');
   while (x && y) {
@@ -14,8 +16,7 @@ const getValidResult = (numsString) => {
 };
 
 const gcd = () => {
-  const gcdNumbers = `${randomNumber()} ${randomNumber()}`;
-  game(gcdNumbers, getValidResult);
+  game(randomGcdNumbers, getValidResult);
 };
 
 export default gcd;

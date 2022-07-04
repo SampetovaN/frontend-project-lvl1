@@ -3,9 +3,7 @@ import { randomNumber, randomInt } from '../src/util.js';
 
 const randomExpression = () => {
   const signs = ['+', '-', '*'];
-  const first = randomNumber();
-  const second = randomNumber();
-  return `${first} ${signs[randomInt(0, 2)]} ${second}`;
+  return `${randomNumber()} ${signs[randomInt(0, 2)]} ${randomNumber()}`;
 };
 const getValidResult = (expression) => {
   const expressionParts = expression.split(' ');
@@ -21,7 +19,7 @@ const getValidResult = (expression) => {
 };
 
 const calc = () => {
-  game(randomExpression(), getValidResult);
+  game(randomExpression, getValidResult);
 };
 
 export default calc;
