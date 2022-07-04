@@ -1,6 +1,8 @@
 import game from '../src/index.js';
 import { randomNumber, randomInt } from '../src/util.js';
 
+const DESCRIPTION = 'What is the result of the expression?';
+
 const randomExpression = () => {
   const signs = ['+', '-', '*'];
   return `${randomNumber()} ${signs[randomInt(0, 2)]} ${randomNumber()}`;
@@ -19,7 +21,7 @@ const getValidResult = (expression) => {
 };
 
 const calc = () => {
-  game(randomExpression, getValidResult);
+  game(randomExpression, getValidResult, DESCRIPTION);
 };
 
 export default calc;

@@ -3,7 +3,7 @@ import learnName from '../src/cli.js';
 
 const NUM_ROUNDS = 3;
 
-const game = (generateCondition, getValidResult) => {
+const game = (generateCondition, getValidResult, description) => {
   const NAME = learnName();
   const round = () => {
     const condition = generateCondition();
@@ -18,7 +18,7 @@ const game = (generateCondition, getValidResult) => {
     console.log('Correct!');
   };
   let i = 0;
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log(description);
   while (i < NUM_ROUNDS) {
     round();
     i += 1;
