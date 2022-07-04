@@ -3,14 +3,13 @@ import learnName from '../src/cli.js';
 
 const NUM_ROUNDS = 3;
 
-const game = (generateCondition, getValidResult) => {
+const game = (generatedCondition, getValidResult) => {
   const NAME = learnName();
   const round = () => {
-    const condition = generateCondition();
-    console.log(`Question: ${condition}`);
+    console.log(`Question: ${generatedCondition}`);
     const answer = readlineSync.prompt();
-    const result = getValidResult(condition);
-    if (answer.trim() !== result) {
+    const result = getValidResult(generatedCondition);
+    if (answer.trim() !== result.toString()) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
       console.log(`Let's try again, ${NAME}!`);
       process.exit();

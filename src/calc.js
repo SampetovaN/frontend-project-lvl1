@@ -17,11 +17,11 @@ const getValidResult = (expression) => {
     '-': firstTerm - secTerm,
     '*': firstTerm * secTerm
   };
-  return `${mapSigns[sign]}`;
+  return mapSigns[sign];
 };
 
 const calc = () => {
-  game(randomExpression, getValidResult);
+  game(randomExpression(), getValidResult);
 };
 
 export default calc;

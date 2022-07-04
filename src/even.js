@@ -4,7 +4,7 @@ import { randomNumber } from '../src/util.js';
 const getValidResult = (num) => num % 2 === 0 ? 'yes' : 'no';
 
 const even = () => {
-  game(randomNumber, getValidResult);
+  game(randomNumber(), getValidResult);
 };
 
 export default even;
