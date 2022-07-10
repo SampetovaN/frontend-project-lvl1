@@ -5,5 +5,5 @@ const randomInt = (minVal, maxVal) => {
 };
 
 const randomNumber = () => randomInt(0, 100);
-const booleanToStr = (booleanFlag) => booleanFlag ? 'yes' : 'no';
+const booleanToStr = (booleanFlag) => (booleanFlag ? 'yes' : 'no');
 export { randomInt, randomNumber, booleanToStr };
