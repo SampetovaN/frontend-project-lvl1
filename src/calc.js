@@ -1,5 +1,5 @@
-import game from '../src/index.js';
-import { randomNumber, randomInt } from '../src/util.js';
+import game from './index.js';
+import { randomNumber, randomInt } from './util.js';
 
 const DESCRIPTION = 'What is the result of the expression?';
 
@@ -15,7 +15,7 @@ const getValidResult = (expression) => {
   const mapSigns = {
     '+': firstTerm + secTerm,
     '-': firstTerm - secTerm,
-    '*': firstTerm * secTerm
+    '*': firstTerm * secTerm,
   };
   return mapSigns[sign];
 };

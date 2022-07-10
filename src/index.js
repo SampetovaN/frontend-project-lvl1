@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import learnName from '../src/cli.js';
+import learnName from './cli.js';
 
 const NUM_ROUNDS = 3;
 

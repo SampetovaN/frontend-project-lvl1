@@ -1,5 +1,5 @@
-import game from '../src/index.js';
-import { randomNumber, randomInt } from '../src/util.js';
+import game from './index.js';
+import { randomNumber, randomInt } from './util.js';
 
 const DESCRIPTION = 'What number is missing in the progression?';
 const EMPTY_NUMBER = '..';
@@ -22,7 +22,7 @@ const randomProgression = () => {
 };
 
 const getValidResult = (progression) => {
-  let numbers = progression.split(' ').map((num) => num !== EMPTY_NUMBER ? Number(num) : num);
+  const numbers = progression.split(' ').map((num) => (num !== EMPTY_NUMBER ? Number(num) : num));
   let foundNumber;
   for (let i = 0; i <= numbers.length; i += 1) {
     if (i === 0 && numbers[i] === EMPTY_NUMBER) {
