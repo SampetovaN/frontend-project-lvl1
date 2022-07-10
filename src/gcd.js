@@ -6,7 +6,7 @@ const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 const randomGcdNumbers = () => `${randomNumber()} ${randomNumber()}`;
 
 const getValidResult = (numsString) => {
-  let [x, y] = numsString.split(' ');
+  let [x, y] = numsString.split(' ').map(Number);
   while (x && y) {
     if (x > y) {
       x %= y;
