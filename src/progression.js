@@ -26,11 +26,11 @@ const getValidResult = (progression) => {
   let foundNumber;
   for (let i = 0; i <= numbers.length; i += 1) {
     if (i === 0 && numbers[i] === EMPTY_NUMBER) {
-      foundNumber = numbers[i + 2] - (numbers[i + 2] - numbers[i + 1]);
+      foundNumber = numbers[i + 1] - (numbers[i + 2] - numbers[i + 1]);
       break;
     } else if (i === numbers.length && numbers[i] === EMPTY_NUMBER) {
-      const lastIndex = numbers.length;
-      foundNumber = numbers[lastIndex - 1] + (numbers[lastIndex - 1] - numbers[lastIndex - 2]);
+      const lastIndex = numbers.length - 1;
+      foundNumber = numbers[lastIndex] + (numbers[lastIndex] - numbers[lastIndex - 1]);
     } else if (numbers[i] === EMPTY_NUMBER) {
       foundNumber = numbers[i - 1] + ((numbers[i + 1] - numbers[i - 1]) / 2);
       break;
